@@ -1,21 +1,24 @@
 package lesson2.l2t1;
 
 public class Menu {
+
+    private SoftDrink[] softDrinks;
     public Menu() {
+        listSoftdrink();
+        for (int i = 0; i < softDrinks.length; i++) {
+            System.out.println("Напиток " + softDrinks[i].getNameDrink() + "\t Цена " + softDrinks[i].getCost()+"р." + "\t Номер кнопки №" + softDrinks[i].getNumberButton());
 
-        Baikal baikal = new Baikal();
-        baikal.setNameDrink("Байкал");
-        baikal.setCost(3);
-        baikal.setNumberButton(1);
+        }
 
-        Tarhun tarhun = new Tarhun();
-        tarhun.setNameDrink("Тархун");
-        tarhun.setCost(2);
-        tarhun.setNumberButton(2);
-
-        Sayani sayani = new Sayani();
-        sayani.setNameDrink("Саяны");
-        sayani.setCost(4);
-        sayani.setNumberButton(3);
     }
+
+    public void listSoftdrink() {
+
+        SoftDrink softDrinkBaikal = new SoftDrink("Байкал", 3, 1);
+        SoftDrink softDrinkTarhun = new SoftDrink("Тархун", 2, 2);
+        SoftDrink softDrinkSayani = new SoftDrink("Саяны", 4, 3);
+        softDrinks = new SoftDrink[]{softDrinkBaikal, softDrinkSayani, softDrinkTarhun};
+
+    }
+
 }
