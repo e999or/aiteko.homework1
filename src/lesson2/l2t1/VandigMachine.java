@@ -1,45 +1,51 @@
 package lesson2.l2t1;
 
-import java.util.Scanner;
 
 public class VandigMachine {
-    public static void main(String [] args){
-        String needMore= "недостаточно средств";
-        System.out.println("Чтобы вывести МЕНЮ нажмите 1");
-        int firstButton = (new Scanner(System.in)).nextInt();
-        if(firstButton == 1) {
-            Menu menu = new Menu();
-            menu.listSoftdrink();
+    private SoftDrink [] drinks = SoftDrink.values();
+    private double deposit;
+    private SoftDrink choseDrink;
+    private int numberButton = 1;
 
-            System.out.println("Внесите денежные средства");
-            int money = (new Scanner(System.in)).nextInt();
-            System.out.println("Выберите напиток ");
-            int buttonDrink = (new Scanner(System.in)).nextInt();
-            if (buttonDrink == 1) {
-                if (money >= 3) {
-                    System.out.println("Вы оплатили напиток Байкал. Спасибо за покупку!");
-                } else if (money < 3) {
-                    System.out.println(needMore);
-                }
-            } else if (buttonDrink == 2) {
-                if (money >= 2) {
-                    System.out.println("Вы оплатили напиток Тархун. Спасибо за покупку!");
-                } else if (money < 2) {
-                    System.out.println(needMore);
-                }
-            } else if (buttonDrink == 3) {
-                if (money >= 4) {
-                    System.out.println("Вы оплатили напиток Саяны. Спасибо за покупку!");
-                } else if (money < 4) {
-                    System.out.println(needMore);
-                }
-            } else if (buttonDrink > 3 || buttonDrink == 0) {
-                System.out.println("Не существует напитка, выберите клавишу от 1 до 3х");
-            } else if (money == 0) {
-                System.out.println("Вы не внесли средства");
-            }
+
+    public void choseDrink(int num){
+        try {
+            choseDrink = drinks[num - 1];
+        }catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("Вы ни чего не выбрали");
         }
     }
 
+    public void showMenu(){
 
+        for(SoftDrink s : drinks){
+            System.out.println("Напиток " + s.getNameDrink() + "\t Цена " + s.getCost()+"р." + "\t Номер кнопки " + numberButton);
+            numberButton++;
+        }
+    }
+
+    public void inputMoney(double money){
+        deposit += money;
+    }
+
+    public double getDepozit(){
+        System.out.println("Ваша сдача " + deposit + "р. ");
+        return deposit;
+    }
+
+    public SoftDrink buyDrink(){
+        if(choseDrink == null){
+            getDepozit();
+            return null;
+        }
+        if (deposit >= choseDrink.getCost()){
+            System.out.println("Ваш напиток " + choseDrink.getNameDrink());
+            System.out.print("Ваша сдача " + Double.toString(deposit - choseDrink.getCost()) + "р.");
+            return choseDrink;
+        }else{
+            System.out.println("Пополните счёт");
+            getDepozit();
+            return null;
+        }
+    }
 }

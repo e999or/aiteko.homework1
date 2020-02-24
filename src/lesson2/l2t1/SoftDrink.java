@@ -1,18 +1,22 @@
 package lesson2.l2t1;
 
-public class SoftDrink {
+public enum SoftDrink {
+    BAIKAL("Байкал", 3),
+    TATHUN("Тархун", 2),
+    SAYANI("Саяны", 4);
+
     private final String nameDrink;
     private int cost;
-    private int numberButton;
 
-    SoftDrink(String nameDrink, int cost, int numberButton) {
+
+    SoftDrink(String nameDrink, int cost) {
         this.nameDrink = nameDrink;
         this.cost = cost;
-        this.numberButton = numberButton;
+
     }
 
     public String getNameDrink() {
-        return  nameDrink;
+        return nameDrink;
     }
 
     public int getCost() {
@@ -23,11 +27,4 @@ public class SoftDrink {
         this.cost = cost;
     }
 
-    public int getNumberButton() {
-        return numberButton;
-    }
-
-    public void setNumberButton(int numberButton) {
-        this.numberButton = numberButton;
-    }
 }

@@ -11,7 +11,7 @@ public class SortirovkaMassiva {
         /*for (int i = 0; i < arr.length - 1; i++) {
             if (arr[i] > arr[i+1]){
                 compare(i, i + 1);
-                i = 0;
+                i = -1;
             }
         }
         for (int i:arr) {
