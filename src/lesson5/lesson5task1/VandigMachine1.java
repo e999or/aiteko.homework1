@@ -1,33 +1,25 @@
-package lesson2.l2t1;
+package lesson5.lesson5task1;
 
 
-import java.util.Arrays;
-import java.util.List;
 
-public class VandigMachine {
-    private List<SoftDrink> drinks;
+
+public class VandigMachine1 {
+    private SoftDrink1[] drinks = SoftDrink1.values();
     private double deposit;
-    private SoftDrink choseDrink;
+    private SoftDrink1 choseDrink;
     private int numberButton = 1;
 
-    VandigMachine(){
-        drinks = Arrays.asList(
-                new SoftDrink("Байкал", 3),
-                new SoftDrink("Тархун", 2),
-                new SoftDrink("Саяны", 4)
-        );
-    }
 
     public void choseDrink(int num){
-        try{
-        choseDrink = drinks.get(num - 1);
+        try {
+            choseDrink = drinks[num - 1];
         }catch (ArrayIndexOutOfBoundsException e){
             System.out.println("Вы ни чего не выбрали");
         }
     }
 
     public void showMenu(){
-        for(SoftDrink s : drinks){
+        for(SoftDrink1 s : drinks){
             System.out.println("Напиток " + s.getNameDrink() + "\t Цена " + s.getCost()+"р." + "\t Номер кнопки " + numberButton);
             numberButton++;
         }
@@ -42,14 +34,14 @@ public class VandigMachine {
         return deposit;
     }
 
-    public SoftDrink buyDrink(){
+    public SoftDrink1 buyDrink(){
         if(choseDrink == null){
-            System.out.println("Выберите напиток");
+            getDepozit();
             return null;
         }
         if (deposit >= choseDrink.getCost()){
             System.out.println("Ваш напиток " + choseDrink.getNameDrink());
-            System.out.print("Ваша сдача " + Double.toString(deposit - choseDrink.getCost()));
+            System.out.print("Ваша сдача " + Double.toString(deposit - choseDrink.getCost()) + "р.");
             return choseDrink;
         }else{
             System.out.println("Пополните счёт");

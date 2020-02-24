@@ -6,11 +6,9 @@ public class Counter {
     //количестве.
 
     static int counter = 0;
-    private int i = 0;
-    public Counter(int i) {
-        this.i = i;
+
+    public Counter() {
         counter++;
-        printCounter();
     }
 
 

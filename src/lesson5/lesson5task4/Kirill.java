@@ -1,13 +1,9 @@
 package lesson5.lesson5task4;
 
 public class Kirill extends Human {
-    @Override
-    public void flee() {
-
-    }
 
     @Override
-    public void escape() {
+    public void accelerates() {
 
     }
 
@@ -18,6 +14,11 @@ public class Kirill extends Human {
 
     @Override
     public void dive() {
+
+    }
+
+    @Override
+    public void escape() {
 
     }
 }

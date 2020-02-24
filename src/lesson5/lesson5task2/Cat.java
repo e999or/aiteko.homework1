@@ -7,6 +7,13 @@ public class Cat extends Animal implements Run{
 
     public Cat(String name) {
         super(name);
+        System.out.println(name);
+    }
+
+    @Override
+    void getName() {
+
+
     }
 
     @Override

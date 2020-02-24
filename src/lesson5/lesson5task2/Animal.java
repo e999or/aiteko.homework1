@@ -11,7 +11,10 @@ public abstract class Animal {
         this.name = name;
     }
 
-    public void getNamme() {
+    abstract void getName();
+    /*
+    public  void getNamme() {
         System.out.println(name);
     }
+    */
 }

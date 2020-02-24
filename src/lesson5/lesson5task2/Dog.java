@@ -7,6 +7,12 @@ public class Dog extends Animal implements Run, Swim{
 
     public Dog(String name) {
         super(name);
+        System.out.println(name);
+    }
+
+    @Override
+    void getName() {
+
     }
 
     @Override

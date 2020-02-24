@@ -7,6 +7,12 @@ import lesson5.lesson5task3.Swim;
 public class Duck extends Animal implements Run, Fly, Swim{
     public Duck(String name) {
         super(name);
+        System.out.println(name);
+    }
+
+    @Override
+    void getName() {
+
     }
 
     @Override
