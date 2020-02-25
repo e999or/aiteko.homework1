@@ -1,5 +1,6 @@
 package lesson6.lesson6task4;
 
+import java.util.Iterator;
 import java.util.Set;
 
 public class EvenLength {
@@ -9,9 +10,10 @@ public class EvenLength {
     //метод вернет ["foo", "bar", "spoon", "!"]
 
     public Set<String> removeEvenLength(Set<String> set){
-        for(String s : set){
-            if(s.length() % 2 == 0 ){
-                set.remove(s);
+        Iterator<String> i = set.iterator();
+        while (i.hasNext()){
+            if(i.next().length() % 2 == 0 ){
+                set.remove(i.next());
             }
         }
 

@@ -2,7 +2,9 @@ package lesson6.Lesson6task2;
 
 import java.util.List;
 
-public class Baskets implements Basket {
+public class OneBasket implements Basket {
+
+
     @Override
     public void addProduct(String product, int quantity) {
 

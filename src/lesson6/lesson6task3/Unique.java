@@ -7,7 +7,7 @@ public class Unique {
     //Написать метод, который возвращает true, если в мапе нет двух и более
     //одинаковых value, и false в противном случае. Для пустой мапы метод
     //возвращает true.
-    static int count = 0;
+    int count = 0;
     List<String> valuesS;
 
     public boolean isUnique(Map<String, String> map) {

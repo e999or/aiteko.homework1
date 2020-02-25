@@ -31,6 +31,7 @@ public class VandigMachine {
             System.out.println("Напиток " + s.getNameDrink() + "\t Цена " + s.getCost()+"р." + "\t Номер кнопки " + numberButton);
             numberButton++;
         }
+        return;
     }
 
     public void inputMoney(double money){

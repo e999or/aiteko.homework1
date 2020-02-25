@@ -13,7 +13,9 @@ public class Person implements Comparator<Person> {
     @Override
     public int compare(Person p1, Person p2) {
         int personAge = p1.getAge() - p2.getAge();
-        return personAge;
+        int persomName = p1.getName().length() - p2.getName().length();
+
+        return personAge - persomName;
     }
 
     public int getAge() {

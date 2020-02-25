@@ -1,19 +1,16 @@
 package lesson5.lesson5task1;
 
-public enum SoftDrink1 {
-    BAIKAL("Байкал", 3),
-    TATHUN("Тархун", 2),
-    SAYANI("Саяны", 4);
+public class SoftDrink1 {
 
     private final String nameDrink;
     private int cost;
 
 
-    SoftDrink1(String nameDrink, int cost) {
+   SoftDrink1(String nameDrink, int cost) {
         this.nameDrink = nameDrink;
         this.cost = cost;
 
-    }
+   }
 
     public String getNameDrink() {
         return nameDrink;
