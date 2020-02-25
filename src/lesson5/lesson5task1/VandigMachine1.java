@@ -21,6 +21,7 @@ public class VandigMachine1 {
     public void choseDrink(int num){
         try {
             choseDrink = drinks.get(num);
+            deposit -= choseDrink.getCost();
         }catch (ArrayIndexOutOfBoundsException e){
             System.out.println("Вы ни чего не выбрали");
         }
