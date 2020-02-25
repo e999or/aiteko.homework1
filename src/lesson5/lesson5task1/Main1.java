@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class Main1 {
     public static void main (String[] args){
 
-        VandigMachine1 v = new VandigMachine1();
         SoftDrink1 drink;
         drink = v.buyDrink(); // не был выбран напиток
         v.inputMoney(10); // на счету лежит 10

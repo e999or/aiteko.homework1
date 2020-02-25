@@ -28,14 +28,13 @@ public class VandigMachine1 {
 
     public void showMenu(){
         System.out.println("\t \tДобро пожаловать в МЕНЮ !" );
-        for (int i = 0; i <= drinks.size()-1; i++) {
+        for (int i = 0; i < drinks.size(); i++) {
             SoftDrink1 s = drinks.get(i);
             System.out.println("Напиток " + s.getNameDrink() + "\t Цена " + s.getCost()+"р." + "\t Номер кнопки " + i);
         }
     }
 
     public void inputMoney(double money){
-        System.out.println("\t \t Внесите средства");
         deposit += money;
     }
 
@@ -45,10 +44,8 @@ public class VandigMachine1 {
     }
 
     public SoftDrink1 buyDrink(){
-        System.out.println("\t \t Выберите напиток");
         if(choseDrink == null){
             System.out.println("\t \t Вы ни чего не выбрали");
-            getDepozit();
             return null;
         }
         if (deposit >= choseDrink.getCost()){
