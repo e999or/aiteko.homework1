@@ -51,7 +51,7 @@ public class VandigMachine1 {
         }
         if (deposit >= choseDrink.getCost()){
             System.out.println("Ваш напиток " + choseDrink.getNameDrink());
-            System.out.print("Ваша сдача " + Double.toString(deposit - choseDrink.getCost()) + "р.");
+            System.out.print("Ваша сдача " + Double.toString(deposit ) + "р.");
             return choseDrink;
         }else{
             System.out.println("Пополните счёт");
