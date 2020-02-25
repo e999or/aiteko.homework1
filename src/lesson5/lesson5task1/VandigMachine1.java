@@ -7,6 +7,9 @@ public class VandigMachine1 {
     private double deposit;
     private SoftDrink1 choseDrink;
 
+
+
+
     VandigMachine1(){
 
     }

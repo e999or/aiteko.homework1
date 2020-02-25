@@ -8,10 +8,8 @@ import java.util.Scanner;
 
 public class Main1 {
     public static void main (String[] args){
-        List<SoftDrink1> s= new ArrayList<SoftDrink1>();
 
-        s.add(new SoftDrink1("ба",3));
-        VandigMachine1 v = new VandigMachine1(s);
+        VandigMachine1 v = new VandigMachine1();
         SoftDrink1 drink;
         drink = v.buyDrink(); // не был выбран напиток
         v.inputMoney(10); // на счету лежит 10
