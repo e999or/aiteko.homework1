@@ -2,9 +2,9 @@ package lesson5.lesson5task1;
 
 public enum SoftDrink1 {
 
-    Baikal("Байкал", 3),
-    Tarhun("Тархун", 2),
-    Sayani("Саяны", 4);
+    BAIKAL("Байкал", 3),
+    TARHUN("Тархун", 2),
+    SAYANI("Саяны", 4);
 
     private final String nameDrink;
     private int cost;
@@ -23,9 +23,5 @@ public enum SoftDrink1 {
     public int getCost() {
         return cost;
     }
-
-    public void setCost(int cost) {
-        this.cost = cost;
-    }
-
+    
 }
