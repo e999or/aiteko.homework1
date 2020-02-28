@@ -23,5 +23,5 @@ public enum SoftDrink1 {
     public int getCost() {
         return cost;
     }
-    
+
 }
